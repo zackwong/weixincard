@@ -1,0 +1,69 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>{{ page.title }}的名片</title>
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="stylesheet" href="assets/card/font-awesome.css">
+    <link rel="stylesheet" href="assets/card/jquery.fancybox.css">
+    <link rel="stylesheet" href="assets/card/card.css">
+    <script type="text/javascript">
+      if (!(navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)))
+      {
+        window.location="/Error.html"; //非手机浏览跳转到404页
+      }
+    </script>
+  </head>
+  <body>
+    <input type="hidden" id="bgcolor" value="">
+    <section class="g-wrap">
+      <div class="contact" id="contact">
+        <div class="v_about">联系方式</div>
+        <div class="v_infomation" style="padding-left:15px;">
+          <span class="v_name">{{ page.title }}<i class="v_position">{{ page.position }}</i></span>
+          <span class="v_node"><i class="fa fa-suitcase"></i>广东雷特斯建材科技有限公司</span>
+          <span class="v_nodes"><i class="fa fa-mobile"></i><a href="tel:{{ page.mobile }}">手机：{{ page.mobile }}</a></span>
+          <span class="v_nodes"><i class="fa fa-phone"></i><a href="tel:0757-{{ page.phone }}">工作：0757-{{ page.phone }}</a></span>
+          <span class="v_nodes"><i class="fa fa-fax"></i>传真：0757-23620938</span>
+          <span class="v_nodes"><a class="popup-img" href="images/card/{{ page.image }}-weixin.jpg"><i class="fa fa-weixin"></i>微信：{{ page.weixin }}</a></span>     
+          <span class="v_nodes"><i class="fa fa-envelope"></i><a href="mailto:{{ page.email }}">邮箱：{{ page.email }}</a></span>   
+          <span class="v_nodes"><i class="fa fa-qq"></i>QQ ：{{ page.qq }}</span>
+          <span class="v_nodes"><i class="fa fa-globe"></i>企业官网：<a href="http://www.lts.so">http://www.lts.so</a></span>
+          <span class="v_nodes"><i class="fa fa-home"></i>地址：广东省佛山市顺德区勒流镇富安工业区富南路6号</span>
+        </div>
+        <div class="v_hot">
+          <h1><img src="images/card/weixin-icon.jpg"></h1>
+          <h2>工程案例</h2>
+          <p class="text-center"><img src="images/card/case-1.jpg" width="320" height="240" border="0" hspace="0" vspace="0"></p>
+          <p class="text-center"><img src="images/card/case-2.jpg" width="320" height="240" border="0" hspace="0" vspace="0"></p>
+          <p class="text-center"><img src="images/card/case-3.jpg" width="320" height="240" border="0" hspace="0" vspace="0"></p>
+        </div>
+        <div class="v_hot">
+          <div class="map pull-left">
+            <a target="_blank" href="http://j.map.baidu.com/maRK1"><img alt="雷特斯百度地图" src="images/card/map.jpg"></a>
+            <a target="_blank" href="http://j.map.baidu.com/maRK1"><div id="map-btn" class="map-btn">导航</div></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="pimg"> <img src="images/card/background.jpg"> <div class="arrow"></div></div>
+    <div class="top_bar footer_bar">
+      <div class="quick">
+        <ul class="quick-box">
+          <li><a href="tel:{{ page.mobile }}" style="text-decoration:none;"><p class="fa fa-phone-square"></p><span>一键拨号</span></a></li>
+          <li><a href="sms:{{ page.mobile }}" style="text-decoration:none;"><p class="fa fa-envelope"></p><span>一键短信</span></a></li>
+          <li><a id="import" href="assets/vcf/{{ page.image }}.vcf" style="text-decoration:none;"><p class="fa fa-user"></p><span>导入通讯录</span></a></li>
+        </ul>
+        <h2><a href="http://osw.cc" style="text-decoration:none;">技术支持：开源网络</a></h2>
+      </div>
+    </div>
+    <div id="shareit"><img id="share-text" src="images/card/live_weixin.png"></div>
+    <script type="text/javascript" src="assets/card/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/card/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="assets/card/custom.js"></script>
+  </body>
+</html>
